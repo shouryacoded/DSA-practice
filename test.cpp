@@ -1,13 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-	int t ,g,c;
-	cin >> t;
-	while (t--)
-	{
-		cin >> g >> c;
-		long long ans = pow(c,2)/(2*g);
-		cout << ans << endl;
-	}
-	return 0;
+int main()
+{
+    system("cls");  // how the testing of the modules
+    int t;
+    cout << 6%4; 
+    return 0;
 }
