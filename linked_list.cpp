@@ -17,6 +17,14 @@ void print(node* n)
     }
 }
 
+void push(node** head_ref, int new_data)
+{
+    node* new_node = new node();
+
+    
+    
+}
+
 int main()
 {
 
