@@ -1,52 +1,45 @@
-// This file is made for sole purpose of practise and nothing else in mind that at this point of time happens to be linked list.
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-class node{
+class Node{
     public:
-        int num;
-        node* next;
+    int data;
+    Node *next;
 };
 
-void print(node* n)
+void printlist(Node *n)
 {
     while(n != NULL)
     {
-        cout << n->num << " " ;
+        cout << n->data << " ";
         n = n->next;
     }
 }
 
-void push(node** head_ref, int new_data)
+// pushing the data infront of the list
+void push (Node **head_ref, int new_data)
 {
-    node* new_node = new node();
+    // alloting a new node for the push operation
+    Node* new_node = new Node();
+    
 
-    
-    
+    // entering the data provided in the newly created node
+    new_node->data = new_data;
+
+    // 
+    new_node->next = *head_ref;
+
+    *head_ref = new_node;
 }
 
 int main()
 {
+    // This file is created to practice the first of the linked list using GFG.
+    Node* head = NULL;
 
+    push(&head, 7);
 
-
-    node* head = new node();
-    node* second = new node();
-    node* third = new node();
-
-    head->num = 10;
-    head->next = second;
-
-    second->num = 20;
-    second->next = third;
-
-    third->num = 30;
-    third->next = NULL;
-
-    cout << (second->next)->num;
-
-    cout << "\n A function to print the nodes is called below :\n";
-    print(head);
-
+    printlist(head);
+    cout << endl;
     return 0;
 }
