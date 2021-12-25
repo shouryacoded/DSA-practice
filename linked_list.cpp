@@ -26,9 +26,10 @@ void push (Node **head_ref, int new_data)
     // entering the data provided in the newly created node
     new_node->data = new_data;
 
-    // 
+    // the new node becomes the new head 
     new_node->next = *head_ref;
 
+    // the address of the head_ref is changed from NULL to address of new_node
     *head_ref = new_node;
 }
 
