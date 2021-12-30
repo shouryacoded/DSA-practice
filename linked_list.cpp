@@ -16,29 +16,67 @@ void printlist(Node *n)
     }
 }
 
-// pushing the data infront of the list
 void push (Node **head_ref, int new_data)
 {
-    // alloting a new node for the push operation
     Node* new_node = new Node();
     
 
-    // entering the data provided in the newly created node
     new_node->data = new_data;
 
-    // the new node becomes the new head 
     new_node->next = *head_ref;
 
-    // the address of the head_ref is changed from NULL to address of new_node
     *head_ref = new_node;
 }
 
+void InsertAfter(Node *prev_node, int new_data)
+{
+    if(prev_node == NULL )
+    {
+        cout << "The previous node cannot be NULL";
+        return;
+    }
+    Node* new_node = new Node();
+
+    new_node->data = new_data;
+
+    new_node->next = prev_node->next;
+
+    prev_node->next = new_node;
+}
+
+void Append(Node** head_ref, int new_data)
+{
+    Node* new_node = new Node();
+
+    Node* last = *head_ref;
+
+    new_node->data = new_data;
+
+    new_node->next = NULL;
+
+
+    if(*head_ref == NULL)
+    {
+        *head_ref = new_node;
+        return ;
+    }
+
+    while(last->next != NULL)
+    {
+        last = last->next;
+    }
+    last->next = new_node;
+    return;
+}
 int main()
 {
-    // This file is created to practice the first of the linked list using GFG.
     Node* head = NULL;
 
     push(&head, 7);
+
+    Append(&head,10);
+
+    InsertAfter(head,12);
 
     printlist(head);
     cout << endl;
