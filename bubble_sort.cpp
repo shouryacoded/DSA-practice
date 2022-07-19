@@ -2,13 +2,13 @@
 using namespace std;
 int main(){
     system("cls");
-    //This technique can be performed with or without a flag to use the more optimized way of sorting 
+    //This technique can be performed with or without a flag to use the more optimized way of sorting
     vector<int> a;
     int size;
     cout << "Enter the size of the array : ";
     cin >> size;
     for(int i = 0; i< size; i++){
-        int val; 
+        int val;
         cin >> val;
         a.push_back(val);
     }
@@ -26,5 +26,6 @@ int main(){
     for(int i =0 ; i < size; i++){
         cout << a[i] << " ";
     }
-    return 0;   
+    return 0;
+
 }
