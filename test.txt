@@ -1,1 +1,0 @@
-This is a tester file to check the upload from Fedora in linux.
